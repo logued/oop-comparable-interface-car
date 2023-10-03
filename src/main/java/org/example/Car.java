@@ -23,9 +23,9 @@ public class Car implements Comparable<Car>
 
     // Once we declare that Car implements the Comparable interface:
     //     "class Car implements Comparable<Car>"
-    // Then we must actually implement (write code for) the
+    // Then we must implement (write code for) the
     // compareTo() method.
-    // Here, we have decided to compare Car objects based on engineSize.
+    // Here, we have decided to compare Car objects based on 'year'.
     // This defines the so-called 'natural ordering' for Car objects.
     // When we use Arrays.sort() on an array of Car objects, then
     // the array will be sorted based on year.
@@ -49,6 +49,7 @@ public class Car implements Comparable<Car>
 
     //TODO Modify this class so that Cars are sorted based on their Make field.
     // Note that when using Comparable, only one ordering can be in place at any one time.
+    // This is a considerable disadvantage of using the Comparable Interface.
 
     @Override
     public String toString()

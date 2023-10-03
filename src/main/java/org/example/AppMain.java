@@ -27,6 +27,7 @@ public class AppMain
 
         Arrays.sort( cars );
         System.out.println("cars[] array after Arrays.sort( cars )");
+        System.out.println("Cars should be in ascending order of year, as defined by the compareTo() method.");
         for( Car car : cars )
             System.out.println( car );
 
@@ -39,11 +40,12 @@ public class AppMain
         
         // Collections.sort() will sort Car objects based on their "natural ordering".
         // There isn't really a "Natural Ordering" for cars, so the designer/programmer
-        // must program in an order by writing the compareTo() method in the Car class.
+        // must program in a 'natural order' by writing the compareTo() method in the Car class.
 
         Collections.sort( carList );
         
         System.out.println("\ncarList ArrayList after Collections.sort( carList )");
+        System.out.println("Cars should be in ascending order of year, as defined by the compareTo() method.");
         for( Car car : carList )
             System.out.println( car );
 
