@@ -28,10 +28,10 @@ public class Car implements Comparable<Car>
     // Here, we have decided to compare Car objects based on 'year'.
     // This defines the so-called 'natural ordering' for Car objects.
     // When we use Arrays.sort() on an array of Car objects, then
-    // the array will be sorted based on year.
+    // the array will be sorted based on the compareTo() method (ie the year).
 
     // Note that we are overriding the compareTo() method that is defined
-    // in the Comparable<T> interface defined in the Java API.
+    // in the Comparable<T> interface from the Java API.
     
     @Override
     public int compareTo( Car otherCar ) {
@@ -48,8 +48,9 @@ public class Car implements Comparable<Car>
     }
 
     //TODO Modify this class so that Cars are sorted based on their Make field.
-    // Note that when using Comparable, only one ordering can be in place at any one time.
+    // Note that when using Comparable, only ONE ordering can be in place at a time.
     // This is a considerable disadvantage of using the Comparable Interface.
+    // We will see that using Comparators gives us more flexibility.
 
     @Override
     public String toString()
