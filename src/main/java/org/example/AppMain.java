@@ -1,4 +1,4 @@
-package org.example;                           // OOP Oct 2024
+package org.example;                           // OOP Oct 2025
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -8,13 +8,13 @@ import java.util.Collections;
 // Sort a List of objects  (ArrayList of Car objects in this case)
 // Key learning objective is to understand that the class type of objects
 // being sorted (here, a Car class) must implement the Comparable Interface,
-// and hence must provide a compareTo() method to compare cars on some fields.
+// and hence must provide a compareTo() method to compare cars on some field(s).
 //
 public class AppMain
 {
     public static void main(String[] args)
     {
-        Car cars[] = new Car[4];    // create array for 4 Car objects
+        Car[] cars = new Car[4];    // create array for 4 Car objects
         
         cars[0]= new Car("Toyota","Corolla",2015,1.6);
         cars[1]= new Car("Daihatsu","Diamond",2008,1.4);
@@ -40,7 +40,8 @@ public class AppMain
         
         // Collections.sort() will sort Car objects based on their "natural ordering".
         // There isn't really a "Natural Ordering" for cars, so the designer/programmer
-        // must program in a 'natural order' by writing the compareTo() method in the Car class.
+        // must program in a 'natural order' by writing the compareTo() method in the Car class
+        // to define that ordering.
 
         Collections.sort( carList );
         

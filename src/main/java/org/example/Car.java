@@ -1,7 +1,7 @@
 package org.example;
 
 // In order to be able to sort an array or list of Car objects,
-// the Arrays.sort() and Collections.sort() methods require that the
+// the Arrays.sort(), Collections.sort() and List.sort() methods require that the
 // Car class :
 // 1. implements the Comparable<T> interface, and consequently that
 // 2. the compareTo() method is written in the Car class
@@ -39,16 +39,19 @@ public class Car implements Comparable<Car>
         if( this.year < otherCar.year )        // will result in ascending order
             return -1;
         else if( this.year == otherCar.year)
-            return 0;
-        else
-            return 1;
+                return 0;
+            else
+                return 1;
 
         // The above logic could also be implemented as
         // "  return this.year - otherCar.year; "
+
+        // alternatively, (and better, as we are less likely to get the logic wrong)
+        // return Integer.compare( this.year, otherCar.year );
     }
 
     //TODO Modify this class so that Cars are sorted based on their Make field.
-    // Note that when using Comparable, only ONE ordering can be in place at a time.
+    // Note that when using the Comparable interface, only ONE ordering can be in place at a time.
     // This is a considerable disadvantage of using the Comparable Interface.
     // We will see that using Comparators gives us more flexibility.
 
