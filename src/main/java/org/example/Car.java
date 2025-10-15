@@ -35,19 +35,21 @@ public class Car implements Comparable<Car>
     
     @Override
     public int compareTo( Car otherCar ) {
-        
-        if( this.year < otherCar.year )        // will result in ascending order
-            return -1;
-        else if( this.year == otherCar.year)
+
+        return Integer.compare( this.year, otherCar.year );
+
+        /*
+        The equivalent logic is:
+
+        if( this.year < otherCar.year )
+            return -1;  // the two objects are in order (based on year)
+        else if( this.year == otherCar.year)   // two objects are the same
                 return 0;
             else
-                return 1;
+                return 1;   // objects are NOT in order, so will be swapped by sort()
 
-        // The above logic could also be implemented as
-        // "  return this.year - otherCar.year; "
+        */
 
-        // alternatively, (and better, as we are less likely to get the logic wrong)
-        // return Integer.compare( this.year, otherCar.year );
     }
 
     //TODO Modify this class so that Cars are sorted based on their Make field.

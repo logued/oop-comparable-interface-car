@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.Collections;
 
 // Demonstrates:
-// Sort an Array of objects (Car objects in this case)
-// Sort a List of objects  (ArrayList of Car objects in this case)
-// Key learning objective is to understand that the class type of objects
+// Sort an Array or List of objects (Car objects in this case)
+// Key learning objective is to understand that the class type of objects in the list
 // being sorted (here, a Car class) must implement the Comparable Interface,
-// and hence must provide a compareTo() method to compare cars on some field(s).
+// and hence must provide a compareTo() method to compare cars on some specified field(s).
+// This is what is called the "Natural Ordering" of the elements in the list.
 //
 public class AppMain
 {
@@ -23,9 +23,11 @@ public class AppMain
 
         // Arrays.sort() will sort Car objects based on their "natural ordering".
         // The library supplied sort() method requires that the objects being sorted
-        // must implement the Comparable Interface for the object type (Car here).
+        // must implement the Comparable Interface for the object type (Car here),
+        // and hence, must have a compareTo() method implemented.
 
-        Arrays.sort( cars );
+        Arrays.sort( cars );  // order depends on the compareTo() method
+
         System.out.println("cars[] array after Arrays.sort( cars )");
         System.out.println("Cars should be in ascending order of year, as defined by the compareTo() method.");
         for( Car car : cars )
@@ -50,6 +52,9 @@ public class AppMain
         for( Car car : carList )
             System.out.println( car );
 
-        //TODO: Rewrite code to sort Car objects based on their Make.
+        //TODO: Rewrite code so that the Natural Ordering of Car elements becomes
+        // - in ascending order of Make.
+        // You can comment out the existing compareTo() method and replace it with
+        // your new code.  Only one compareTo() method can exist in Car.
     }  
 }
